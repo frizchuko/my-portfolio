@@ -5,7 +5,7 @@ import {UserDeleteOutlined,ShareAltOutlined, BugOutlined, CustomerServiceOutline
 
 export default function Sidebar({ closeDrawer }: { closeDrawer?: () => void }) {
   return (
-    <div className="p-6 bg-white h-[800px] shadow-md">
+    <div className="p-6 bg-white h-[800px] w-[250px] shadow-md">
       
       <div className="flex flex-col space-y-8 mt-8">
         <div className="my-4 mx-auto bg-white hover:bg-gray-50 rounded-lg py-8 px-10">
