@@ -13,13 +13,14 @@ const AboutSection = () => {
           {/* Left Side - Text Content */}
           <div className="w-full p-4 md:w-1/2 mb-8 md:mb-0">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
-            <p className="text-2xl md:text-3xl mb-4 my-6">
+            <p className="text-2xl md:text-3xl mb-4 my-6 font-lusitana">
               I love crafting clean and efficient solutions, bringing ideas to
               life through code.
             </p>
             <div className="my-8">
-              <p className="text-base md:text-lg my-8 text-pretty">
-              Hey there! I'm a Customer Support Specialist and Software Developer 
+              <p className="text-base md:text-lg my-8 text-pretty font-lusitana">
+              Hey there!I am a passionate frontend developer specializing in building intuitive
+                and responsive web applications. I'm also a Technical Support Specialist and Customer Support Representative
               with over three years of experience helping users 
               and solving tech challenges. 
                  Problem-solving, clear communication, and creating great user experiences are what I do best.

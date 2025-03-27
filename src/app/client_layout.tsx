@@ -7,7 +7,7 @@ import Sidebar from "../app/components/sidebar";
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Navbar (Always on Top) */}
+
       <Navbar />
 
       {/* Main Layout: Sidebar + Content */}
