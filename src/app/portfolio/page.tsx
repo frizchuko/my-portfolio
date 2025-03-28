@@ -41,7 +41,7 @@ export default function Portfolio() {
         {isLoading ? (
           <Loading setIsLoading={setIsLoading} />
         ) : (
-          <main className="bg-white text-gray-800 mt-6">
+          <main className="bg-white text-gray-800 my-12">
             {/* Hero Section */}
             <section className="relative h-screen flex flex-col items-center justify-center text-center px-6 bg-gray-50">
               {/* Video Background */}
@@ -51,7 +51,7 @@ export default function Portfolio() {
                     loop 
                      muted
                     >
-               <source src="/nightsky.mp4" type="video/mp4" />
+               <source src="/modeone.m4v" type="video/mp4" />
   
                 </video>
 
@@ -68,25 +68,25 @@ export default function Portfolio() {
 
 
                         {/* About Section */}
-                        <section className="mb-12 text-center mt-12 ">
+                        {/* <section className="mb-12 text-center mt-12 ">
               <h2 className="text-3xl font-bold mb-4">About Me</h2>
               <p className="text-gray-700 max-w-2xl mx-auto">
                 I am a passionate frontend developer specializing in building intuitive
                 and responsive web applications....
               </p>
               <Button className="mt-4" href="/about">Read More</Button>
-            </section>
+            </section> */}
 
             {/* Projects Section */}
            
             
-               <section className="py-16 bg-gray-50">
+               {/* <section className="py-16 bg-gray-50">
             <div className="max-w-5xl mx-auto text-center">
              <h2 className="text-3xl font-semibold text-gray-800">Projects</h2>
              <p className="text-gray-600 mt-2">Some of my recent work</p>
 
              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-               {projects.slice(0, 3).map((project) => ( // Show only first 3 projects
+               {projects.slice(0, 3).map((project) => ( 
                  <ProjectCard 
                  key={project.id}
                  title={project.title}
@@ -96,10 +96,10 @@ export default function Portfolio() {
       ))}
     </div>
   </div>
-</section>
+</section> */}
 
      {/* Testimonials Section */}
-     <section className="text-center my-6 ">
+     {/* <section className="text-center my-6 ">
               <h2 className="text-3xl font-bold mb-4">Testimonials</h2>
               <div className="flex flex-col items-center space-y-6">
                 {testimonials.slice(0, 3).map((testimonial, index) => (
@@ -111,7 +111,7 @@ export default function Portfolio() {
                 ))}
               </div>
               <Button className="mt-4" href="/testimonials">View All Testimonials</Button>
-            </section>
+            </section> */}
 
             {/* Skills Section */}
             {/* <section className="py-16 bg-gray-50">
