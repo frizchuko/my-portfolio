@@ -12,18 +12,21 @@ import {
   CodeSandboxOutlined,
   AntDesignOutlined,
 } from "@ant-design/icons";
+import { FaCss3Alt } from "react-icons/fa";
 
 const skills = [
   { name: "HTML5", icon: Html5Outlined, level: "Advanced", color: "#000000"},
-  { name: "Next.js", icon: CodeOutlined, level: "Advanced", color: "#32CD32" }, // Lime Green
-  { name: "React.js", icon: CodeOutlined, level: "Advanced", color: "#87CEEB" }, // Sky Blue
-  { name: "TypeScript", icon: ApiOutlined, level: "Intermediate", color: "#FFA500" }, // Orange
-  { name: "Tailwind CSS", icon: ToolOutlined, level: "Advanced", color: "#FF69B4" }, // Pink
-  { name: "JavaScript", icon: JavaScriptOutlined , level: "Advanced", color: "#FFD700" }, // Lemon Yellow
+  { name: "CSS", icon: FaCss3Alt, level: "Advanced", color: "#87CEEB"},
+  { name: "JavaScript", icon: JavaScriptOutlined , level: "Advanced", color: "#FFD700" }, 
+  { name: "Next.js", icon: CodeOutlined, level: "Advanced", color: "#32CD32" }, 
+  { name: "React.js", icon: CodeOutlined, level: "Advanced", color: "#87CEEB" }, 
+  { name: "TypeScript", icon: ApiOutlined, level: "Intermediate", color: "#FFA500" }, 
+  { name: "Tailwind CSS", icon: ToolOutlined, level: "Advanced", color: "#FF69B4" }, 
+
   { name: "Ant Design", icon: AntDesignOutlined, level: "Advanced", color: "#FF69B4"},
   { name: "Bootstrap", icon: CodeSandboxOutlined, level: "Advanced", color: "#87CEEB"},
-  { name: "Git & GitHub", icon: GithubOutlined, level: "Intermediate", color: "#800080" }, // Deep Purple
-  { name: "Vercel", icon: CloudServerOutlined, level: "Intermediate", color: "#4682B4" }, // Steel Blue
+  { name: "Git & GitHub", icon: GithubOutlined, level: "Intermediate", color: "#800080" },
+  { name: "Vercel", icon: CloudServerOutlined, level: "Intermediate", color: "#4682B4" }, 
 ];
 
 export default function Skills() {

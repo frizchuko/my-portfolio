@@ -2,55 +2,64 @@
 import { useState } from "react";
 import { Layout, Button } from "antd";
 import { motion } from "framer-motion";
+import LazyVideo from "../components/lazyvideo";
 
 const projects = [
   {
     id: 1,
     title: "ModeOne Group",
     video: "/modeone.m4v",
-    description: " Developed using HTML5, CSS3, Bootstrap, JavaScript, and jQuery, ensuring a responsive and visually appealing design. The site features a modern layout with smooth animations, interactive elements, and optimized performance for an intuitive user experience. Leveraging Bootstrap’s grid system. The site is structured with clean, maintainable code, enhancing both functionality and scalability."
+    description: "Developed using HTML5, CSS3, Bootstrap, JavaScript, and jQuery, ensuring a responsive and visually appealing design. The site features a modern layout with smooth animations, interactive elements, and optimized performance for an intuitive user experience. Leveraging Bootstrap’s grid system. The site is structured with clean, maintainable code, enhancing both functionality and scalability.",
+    poster: "/lazyload.jpg"
   },
   {
     id: 2,
     title: "Qol Labs",
-    video: "/nightsky.mp4",
-    description: "A brief description of Project Two."
+    video: "/steam.mp4",
+    description: "A brief description of Project Two.",
+    poster: "/lazyload.jpg"
   },
   {
     id: 3,
     title: "Zuojoff",
     video: "/nightsky.mp4",
-    description: "A brief description of Qol."
+    description: "A brief description of Qol.",
+    poster: "/lazyload.jpg"
   },
   {
     id: 4,
     title: "Zuojoff",
     video: "/modeone.m4v",
-    description: "A brief description of Zuojoff."
+    description: "A brief description of Zuojoff.",
+    poster: "/lazyload.jpg"
   },
   {
     id: 5,
     title: "Project Five",
     video: "/nightsky.mp4",
-    description: "A brief description of Project Five."
+    description: "A brief description of Project Five.",
+    poster: "/lazyload.jpg"
   },
   {
     id: 6,
     title: "Project Six",
-    video: "/modeone.m4v",
-    description: "A brief description of Project Six."
+    video: "/steam.mp4",
+    description: "A brief description of Project Six.",
+    poster: "/lazyload.jpg"
   },
   {
     id: 7,
     title: "Project Seven",
     video: "/nightsky.mp4",
-    description: "A brief description of Project Seven."
+    description: "A brief description of Project Seven.",
+    poster: "/lazyload.jpg"
   },
   {
     id: 8,
     title: "Project Eight",
     video: "/modeone.m4v",
-    description: "A brief description of Project Eight."
+    description: "A brief description of Project Eight.",
+    poster: "/lazyload.jpg"
   }
 ];
 
@@ -84,17 +93,21 @@ export default function Projects() {
               className="space-y-4"
             >
               {visibleProjects.map((project) => (
-                <div key={project.id} className="cursor-pointer" onClick={() => setSelectedProject(project)}>
-                 
-                       <video 
-                         src={project.video} 
-                         className="w-full h-full object-cover rounded-lg" 
-                         muted 
-                         />
-                      
-
+                <motion.div
+                  key={project.id}
+                  className="cursor-pointer"
+                  onClick={() => setSelectedProject(project)}
+                  initial={{ x: -50, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                >
+                  <video 
+                    src={project.video} 
+                    className="w-full h-full object-cover rounded-lg" 
+                    muted 
+                  />
                   <p className="mt-2 text-sm text-center">{project.title}</p>
-                </div>
+                </motion.div>
               ))}
             </motion.div>
 
@@ -115,7 +128,7 @@ export default function Projects() {
 
           {/* Right Column */}
           <div className="col-span-2 flex flex-col items-center my-14">
-            <video src={selectedProject.video} className="w-full h-96 object-cover rounded-md" controls autoPlay />
+          <LazyVideo key={selectedProject.id} src={selectedProject.video} poster={selectedProject.poster} autoPlay />
             <p className="mt-4 text-lg font-semibold">{selectedProject.title}</p>
             <p className="text-gray-600">{selectedProject.description}</p>
           </div>

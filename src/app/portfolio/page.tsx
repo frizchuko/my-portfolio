@@ -1,8 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Button, Card, Layout } from "antd";
-import { GithubOutlined, LinkedinOutlined, MailOutlined } from "@ant-design/icons";
+import { ArrowRightOutlined, GithubOutlined, LinkedinOutlined, MailOutlined } from "@ant-design/icons";
 import Loading from '@/loading/loading';
+import { useRouter } from "next/navigation";
 import { projects } from "../projects/components/projectData";
 import ProjectCard from "../projects/components/projectCard";
 
@@ -26,6 +27,7 @@ const testimonials = [
 ];
 
 export default function Portfolio() {
+  const router = useRouter();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -36,7 +38,7 @@ export default function Portfolio() {
 
   return (
     <Layout className="h-[800px] overflow-y-scroll">
-      {/* Main Content */}
+      
       <Content className="w-full p-6">
         {isLoading ? (
           <Loading setIsLoading={setIsLoading} />
@@ -44,7 +46,7 @@ export default function Portfolio() {
           <main className="bg-white text-gray-800 my-12">
             {/* Hero Section */}
             <section className="relative h-screen flex flex-col items-center justify-center text-center px-6 bg-gray-50">
-              {/* Video Background */}
+             
                 <video 
                   className="absolute top-0 left-0 w-full h-full object-cover z-0" 
                    autoPlay 
@@ -129,11 +131,11 @@ export default function Portfolio() {
             <section className="py-16 ">
               <div className="max-w-5xl mx-auto text-center">
                 <h2 className="text-3xl font-semibold text-gray-800">Get in Touch</h2>
-                <p className="text-gray-600 mt-2">Let's build something great together.</p>
+               
                 <div className="flex justify-center gap-4 mt-6">
-                  <Button icon={<GithubOutlined />} shape="circle" />
-                  <Button icon={<LinkedinOutlined />} shape="circle" />
-                  <Button icon={<MailOutlined />} shape="circle" />
+                  <Button icon={<ArrowRightOutlined />} shape="circle"  onClick={() => router.push("/contact")}/>
+                  {/* <Button icon={<LinkedinOutlined />} shape="circle" />
+                  <Button icon={<MailOutlined />} shape="circle" /> */}
                 </div>
               </div>
             </section>
