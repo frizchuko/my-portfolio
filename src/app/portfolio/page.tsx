@@ -69,36 +69,9 @@ export default function Portfolio() {
               </section>
 
 
-                        {/* About Section */}
-                        {/* <section className="mb-12 text-center mt-12 ">
-              <h2 className="text-3xl font-bold mb-4">About Me</h2>
-              <p className="text-gray-700 max-w-2xl mx-auto">
-                I am a passionate frontend developer specializing in building intuitive
-                and responsive web applications....
-              </p>
-              <Button className="mt-4" href="/about">Read More</Button>
-            </section> */}
+                       
 
-            {/* Projects Section */}
            
-            
-               {/* <section className="py-16 bg-gray-50">
-            <div className="max-w-5xl mx-auto text-center">
-             <h2 className="text-3xl font-semibold text-gray-800">Projects</h2>
-             <p className="text-gray-600 mt-2">Some of my recent work</p>
-
-             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-               {projects.slice(0, 3).map((project) => ( 
-                 <ProjectCard 
-                 key={project.id}
-                 title={project.title}
-               description={project.description}
-              videoUrl={project.video}
-                 />
-      ))}
-    </div>
-  </div>
-</section> */}
 
      {/* Testimonials Section */}
      {/* <section className="text-center my-6 ">
