@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Layout, Card, Button } from "antd";
+import { Layout, Card} from "antd";
 import {FilePdfOutlined, ShareAltOutlined} from "@ant-design/icons"
 
 const { Content } = Layout;
@@ -20,12 +20,12 @@ const AboutSection = () => {
             <div className="my-8">
               <p className="text-base md:text-lg my-8 text-pretty font-lusitana">
               Hey there!I am a passionate frontend developer specializing in building intuitive
-                and responsive web applications. I'm also a Technical Support Specialist and Customer Support Representative
+                and responsive web applications. I am also a Technical Support Specialist and Customer Support Representative
               with over three years of experience helping users 
               and solving tech challenges. 
                  Problem-solving, clear communication, and creating great user experiences are what I do best.
                   Whether it's fixing an issue or building something new,
-                   I’m all about making things work smoothly for people."
+                   I am all about making things work smoothly for people."
               </p>
               
               <a

@@ -62,7 +62,7 @@ export default function Portfolio() {
 
   
                     <div className="relative z-20 text-white">
-                 <h1 className="text-4xl md:text-6xl font-bold">Hello, I'm Femi Oriodofe</h1>
+                 <h1 className="text-4xl md:text-6xl font-bold">Hello, I am Femi Oriodofe</h1>
                <p className="text-lg md:text-xl mt-4">Building modern web experiences with Next.js & Tailwind CSS</p>
                 {/* <Button type="primary" className="mt-6 bg-gray-900 hover:bg-gray-700 border-none">View My Work</Button> */}
                  </div>
