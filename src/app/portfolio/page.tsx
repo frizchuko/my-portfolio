@@ -53,7 +53,7 @@ export default function Portfolio() {
                     loop 
                      muted
                     >
-               <source src="/modeone.m4v" type="video/mp4" />
+               <source src="/comp.mp4" type="video/mp4" />
   
                 </video>
 
