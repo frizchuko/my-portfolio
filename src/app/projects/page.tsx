@@ -8,7 +8,7 @@ const projects = [
   {
     id: 1,
     title: "ModeOne Group",
-    video: "/modeone.m4v",
+    video: "/comp.mp4",
     description: "Developed using HTML5, CSS3, Bootstrap, JavaScript, and jQuery, ensuring a responsive and visually appealing design. The site features a modern layout with smooth animations, interactive elements, and optimized performance for an intuitive user experience. Leveraging Bootstrap’s grid system. The site is structured with clean, maintainable code, enhancing both functionality and scalability.",
     poster: "/lazyload.jpg"
   },
@@ -29,7 +29,7 @@ const projects = [
   {
     id: 4,
     title: "Zuojoff",
-    video: "/modeone.m4v",
+    video: "/comp.mp4",
     description: "A brief description of Zuojoff.",
     poster: "/lazyload.jpg"
   },
@@ -57,7 +57,7 @@ const projects = [
   {
     id: 8,
     title: "Project Eight",
-    video: "/modeone.m4v",
+    video: "/comp.mp4",
     description: "A brief description of Project Eight.",
     poster: "/lazyload.jpg"
   }
