@@ -1,4 +1,4 @@
-import { Card, Button } from "antd";
+import {  Button } from "antd";
 
 interface ProjectProps {
   title: string;
