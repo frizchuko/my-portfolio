@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Button, Layout } from "antd";
-import { ArrowRightOutlined, GithubOutlined, LinkedinOutlined, MailOutlined } from "@ant-design/icons";
+import { ArrowRightOutlined} from "@ant-design/icons";
 import Loading from '@/loading/loading';
 import { useRouter } from "next/navigation";
 

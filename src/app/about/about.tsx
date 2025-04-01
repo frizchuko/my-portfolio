@@ -25,7 +25,7 @@ const AboutSection = () => {
               and solving tech challenges. 
                  Problem-solving, clear communication, and creating great user experiences are what I do best.
                   Whether it is fixing an issue or building something new,
-                   I am all about making things work smoothly for people."
+                   I am all about making things work smoothly for people.
               </p>
               
               <a

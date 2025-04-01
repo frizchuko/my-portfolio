@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { Modal, Input, Button, Form, message } from "antd";
 
-
 interface ContactModalProps {
   visible: boolean;
   onClose: () => void;
@@ -23,7 +22,7 @@ export default function ContactModal({ visible, onClose }: ContactModalProps) {
       message.success("Message sent successfully!");
       form.resetFields();
       onClose();
-    } catch (error) {
+    } catch {
       message.error("Please fill in all fields correctly.");
     } finally {
       setLoading(false);
