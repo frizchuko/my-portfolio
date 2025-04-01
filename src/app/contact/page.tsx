@@ -29,7 +29,7 @@ export default function ContactPage() {
     <div>
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen p-4">
         {/* Left Column - Placeholder Image */}
-        <div className="hidden lg:flex items-center justify-center">
+        <div className=" lg:flex items-center justify-center">
           <div className="w-3/4 h-3/4">
             <Image 
               src="/contact.gif" 
