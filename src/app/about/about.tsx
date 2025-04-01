@@ -24,7 +24,7 @@ const AboutSection = () => {
               with over three years of experience helping users 
               and solving tech challenges. 
                  Problem-solving, clear communication, and creating great user experiences are what I do best.
-                  Whether it's fixing an issue or building something new,
+                  Whether it is fixing an issue or building something new,
                    I am all about making things work smoothly for people."
               </p>
               

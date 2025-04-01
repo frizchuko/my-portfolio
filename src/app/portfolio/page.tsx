@@ -1,30 +1,29 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Button, Card, Layout } from "antd";
+import { Button, Layout } from "antd";
 import { ArrowRightOutlined, GithubOutlined, LinkedinOutlined, MailOutlined } from "@ant-design/icons";
 import Loading from '@/loading/loading';
 import { useRouter } from "next/navigation";
-import { projects } from "../projects/components/projectData";
-import ProjectCard from "../projects/components/projectCard";
+
 
 const { Content } = Layout; 
-const testimonials = [
-  {
-    quote: "Neo is an outstanding developer! His attention to detail is unmatched.",
-    name: "John Doe",
-    role: "CTO, TechCorp"
-  },
-  {
-    quote: "Working with Neo was a pleasure. He delivers top-quality code!",
-    name: "Jane Smith",
-    role: "CEO, StartupX"
-  },
-  {
-    quote: "Neo's expertise in frontend development is impressive.",
-    name: "Michael Lee",
-    role: "Lead Engineer, Web Solutions"
-  }
-];
+// const testimonials = [
+//   {
+//     quote: "Neo is an outstanding developer! His attention to detail is unmatched.",
+//     name: "John Doe",
+//     role: "CTO, TechCorp"
+//   },
+//   {
+//     quote: "Working with Neo was a pleasure. He delivers top-quality code!",
+//     name: "Jane Smith",
+//     role: "CEO, StartupX"
+//   },
+//   {
+//     quote: "Neo's expertise in frontend development is impressive.",
+//     name: "Michael Lee",
+//     role: "Lead Engineer, Web Solutions"
+//   }
+// ];
 
 export default function Portfolio() {
   const router = useRouter();
