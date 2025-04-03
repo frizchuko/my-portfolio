@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { Layout } from "antd";
 import { motion } from "framer-motion";
-import Image from "next/image";
+
 
 interface Article {
   title: string;
