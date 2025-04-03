@@ -4,8 +4,8 @@ import { useState } from "react";
 import { Drawer, Button } from "antd";
 import { MenuOutlined, UserDeleteOutlined, 
   ShareAltOutlined, BugOutlined, 
-  CustomerServiceOutlined, HomeOutlined } from "@ant-design/icons";
-  import { IoBookOutline } from "react-icons/io5";
+  CustomerServiceOutlined, HomeOutlined, BookOutlined } from "@ant-design/icons";
+  
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -20,7 +20,7 @@ export default function Navbar() {
     { href: "/projects", label: "Projects", icon: ShareAltOutlined, color: "#FFD700" }, // Lemon Yellow
     { href: "/skills", label: "Skills", icon: BugOutlined, color: "#4682B4" }, // Steel Blue
     { href: "/contact", label: "Contact", icon: CustomerServiceOutlined, color: "#FF69B4" }, // Pink
-    { href: "/blog", label: "My Blog", icon: IoBookOutline, color: "#262626" },
+    { href: "/blog", label: " Blog", icon: BookOutlined, color: "#262626" },
   ];
 
   return (
@@ -45,7 +45,7 @@ export default function Navbar() {
           return (
             <div
               key={href}
-              className={`my-4 mx-auto rounded-lg py-8 px-10 transition-all ${isActive ? "bg-gray-200 !text-neutral-900 font-bold" : "bg-white hover:bg-gray-50 !text-neutral-900 hover:text-gray-900 font-bold"}`}
+              className={`my-4 mx-auto rounded-lg py-8 px-10 transition-all ${isActive ? "bg-gray-200 !text-neutral-900 font-bold" : "bg-white hover:bg-gray-100 !text-neutral-900 hover:text-gray-900 font-bold"}`}
             >
               <Link href={href} className="flex items-center text-neutral-700 hover:text-neutral-900" style={{ fontSize: "1.1rem", color: "#262626" }}>
                 <IconComponent style={{ fontSize: "1.5rem", color: color }} />

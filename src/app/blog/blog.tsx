@@ -28,8 +28,8 @@ export default function Blog() {
 
   return (
     <Layout className="h-full overflow-y-scroll">
-      <Content className="w-full p-4">
-        <div className="max-w-4xl mx-auto p-6 mt-14">
+      <Content className="w-full md:p-4 p-0">
+        <div className="max-w-4xl mx-auto p-0 mt-14 md:p-6">
           <h1 className="text-2xl font-bold mb-4">
             While you are here, check out the latest happenings in the world of tech
           </h1>
@@ -46,7 +46,7 @@ export default function Blog() {
                 viewport={{ once: true }}
               >
                 {article.urlToImage && (
-                  <Image
+                  <img
                     src={article.urlToImage}
                     alt={article.title}
                     className="w-full h-40 object-cover rounded"
