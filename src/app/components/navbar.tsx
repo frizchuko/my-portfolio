@@ -5,6 +5,7 @@ import { Drawer, Button } from "antd";
 import { MenuOutlined, UserDeleteOutlined, 
   ShareAltOutlined, BugOutlined, 
   CustomerServiceOutlined, HomeOutlined } from "@ant-design/icons";
+  import { IoBookOutline } from "react-icons/io5";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -19,6 +20,7 @@ export default function Navbar() {
     { href: "/projects", label: "Projects", icon: ShareAltOutlined, color: "#FFD700" }, // Lemon Yellow
     { href: "/skills", label: "Skills", icon: BugOutlined, color: "#4682B4" }, // Steel Blue
     { href: "/contact", label: "Contact", icon: CustomerServiceOutlined, color: "#FF69B4" }, // Pink
+    { href: "/blog", label: "My Blog", icon: IoBookOutline, color: "#262626" },
   ];
 
   return (
