@@ -3,7 +3,7 @@ import Blog from "./blog";
 
 export default function Page() {
     return (
-        <div className="w-full h-full bg-white px-6">
+        <div className="w-full h-[1000px] bg-white px-6 overflow-y-scroll">
             <Blog/>
       </div>
     )

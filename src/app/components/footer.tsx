@@ -22,10 +22,12 @@ export default function Footer() {
           
           {/* Navigation Links */}
           <div className="flex flex-wrap justify-center md:justify-start space-x-6 mb-4 md:mb-0">
-            <Link href="/about" className="text-green-300">about</Link>
-            <Link href="/projects" className="text-blue-500">projects</Link>
-            <Link href="/skills" className="text-blue-300">skills</Link>
-            <Link href="/contact" className="text-pink-400">contact</Link>
+            <Link href="/about" className="text-green-300 hover:text-green-600">about</Link>
+            <Link href="/projects" className="text-blue-500 hover:text-blue-800">projects</Link>
+            <Link href="/skills" className="text-yellow-300 hover:text-yellow-600">stack</Link>
+            <Link href="/contact" className="text-pink-400 hover:text-pink-600">contact</Link>
+            <Link href="/blog" className="text-gray-50 hover:text-gray-400">blog</Link>
+
           </div>
 
           {/* Mailing Unit (Email Input) */}
