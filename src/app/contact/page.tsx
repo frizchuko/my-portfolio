@@ -27,10 +27,10 @@ export default function ContactPage() {
 
   return (
     <div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen p-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen p-4 mt-12 lg:mt-4">
         {/* Left Column - Placeholder Image */}
         <div className=" lg:flex items-center justify-center">
-          <div className="w-3/4 h-3/4">
+          <div className="lg:w-3/4 lg:h-3/4 w-full ">
             <Image 
               src="/contact.gif" 
               alt="contact illustration" 
