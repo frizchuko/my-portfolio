@@ -39,7 +39,7 @@ export default function Navbar() {
       </nav>
 
       {/* Drawer for Mobile View */}
-      <Drawer title="Menu" placement="right" onClose={() => setOpen(false)} open={open} width={200} className="overflow-x-hidden">
+      <Drawer title="Menu" placement="right" onClose={() => setOpen(false)} open={open} width={220} className="overflow-x-hidden">
         {links.map(({ href, label, icon: IconComponent, color }) => {
           const isActive = pathname === href;
           return (
