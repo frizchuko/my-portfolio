@@ -15,10 +15,10 @@ export default function Sidebar({ closeDrawer }: { closeDrawer?: () => void }) {
 
   const links = [
     { href: "/", label: "Home", icon: HomeOutlined, color: "#32CD32" }, // Lime Green
-    { href: "/about", label: "About", icon: UserDeleteOutlined, color: "#87CEEB" }, // Sky Blue
-    { href: "/projects", label: "Projects", icon: ShareAltOutlined, color: "#FFD700" }, // Lemon Yellow
-    { href: "/skills", label: "Skills", icon: BugOutlined, color: "#4682B4" }, // Steel Blue
-    { href: "/contact", label: "Contact", icon: CustomerServiceOutlined, color: "#FF69B4" }, // Pink
+    { href: "/about", label: "About Me", icon: UserDeleteOutlined, color: "#87CEEB" }, // Sky Blue
+    { href: "/projects", label: "My Projects", icon: ShareAltOutlined, color: "#FFD700" }, // Lemon Yellow
+    { href: "/skills", label: "My Tech Stack", icon: BugOutlined, color: "#4682B4" }, // Steel Blue
+    { href: "/contact", label: "Contact Me", icon: CustomerServiceOutlined, color: "#FF69B4" }, // Pink
   ];
 
   return (
@@ -35,7 +35,7 @@ export default function Sidebar({ closeDrawer }: { closeDrawer?: () => void }) {
                   : "bg-white hover:bg-gray-50 text-neutral-900 hover:text-gray-900 font-bold"
               }`}
             >
-              <Link href={href} onClick={closeDrawer} className="flex items-center space-x-3">
+              <Link href={href} onClick={closeDrawer} className="flex items-center space-x-3" style={{ fontSize: "1.1rem", color: color }} >
                 <IconComponent style={{ fontSize: "1.5rem", color: color }} />
                 <span>{label}</span>
               </Link>

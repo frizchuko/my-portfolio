@@ -1131,6 +1131,11 @@ doctrine@^2.1.0:
   dependencies:
     esutils "^2.0.2"
 
+dotenv@^16.4.7:
+  version "16.4.7"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.4.7.tgz#0e20c5b82950140aa99be360a8a5f52335f53c26"
+  integrity sha512-47qPchRCykZC03FhkYAhrvwU4xDBFIj1QPqaarj6mdM/hgUzfPHcpkHJOn3mJAufFeeAxAzeGsr5X0M4k6fLZQ==
+
 dunder-proto@^1.0.0, dunder-proto@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/dunder-proto/-/dunder-proto-1.0.1.tgz#d7ae667e1dc83482f8b70fd0f6eefc50da30f58a"
@@ -1694,6 +1699,11 @@ graphemer@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/graphemer/-/graphemer-1.4.0.tgz#fb2f1d55e0e3a1849aeffc90c4fa0dd53a0e66c6"
   integrity sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==
+
+gsap@^3.12.7:
+  version "3.12.7"
+  resolved "https://registry.yarnpkg.com/gsap/-/gsap-3.12.7.tgz#1b690def901ac9b21d4909f39c2b52418154463d"
+  integrity sha512-V4GsyVamhmKefvcAKaoy0h6si0xX7ogwBoBSs2CTJwt7luW0oZzC0LhdkyuKV8PJAXr7Yaj8pMjCKD4GJ+eEMg==
 
 has-bigints@^1.0.2:
   version "1.1.0"
