@@ -1,72 +1,54 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
 
-const words = ['Hi there', 'Just a moment...', 'Almost there...', 'here we go!'];
-
-interface LoadingProps{
+interface LoadingProps {
   setIsLoading: (value: boolean) => void;
 }
 
 export default function Loading({ setIsLoading }: LoadingProps) {
-  const [text, setText] = useState('');
-  const [wordIndex, setWordIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
+  const logoRef = useRef<HTMLDivElement>(null); // Reference for the logo container
 
   useEffect(() => {
-    const currentWord = words[wordIndex];
-    const typingSpeed = isDeleting ? 40 : 80;
-    const delay = isDeleting ? 40 : 160;
-
-    if (!isDeleting && charIndex === currentWord.length) {
-      setTimeout(() => setIsDeleting(true), 1000);
-      return;
+    if (logoRef.current) {
+      const bars = logoRef.current.querySelectorAll('.logo-bar');
+      gsap.from(bars, {
+        opacity: 0,
+        x: -100, // Bars start from the left
+        stagger: 0.2, // Stagger the appearance of each bar
+        duration: 1,
+        delay: 1, // Delay before starting the animation (after page loads)
+        onComplete: () => {
+          // Simulate loading completion after the logo is formed
+          gsap.set(logoRef.current, { scale: 1 }); // Reset the scale to 1 before zooming in
+          gsap.to(logoRef.current, {
+            scale: 3, // Zoom in effect
+            opacity: 0, // Fade out
+            duration: 1, // Duration of the zoom effect
+            onComplete: () => {
+              setIsLoading(false); // End the loading animation after zooming
+            },
+          });
+        },
+      });
     }
-
-    if (isDeleting && charIndex === 0) {
-      setIsDeleting(false);
-      setWordIndex((prev) => (prev + 1) % words.length);
-      return;
-    }
-
-    const timeout = setTimeout(() => {
-      setText(currentWord.substring(0, charIndex + (isDeleting ? -1 : 1)));
-      setCharIndex((prev) => prev + (isDeleting ? -1 : 1));
-    }, isDeleting ? typingSpeed : delay);
-
-    return () => clearTimeout(timeout);
-  }, [charIndex, isDeleting, wordIndex]);
-
-  // Simulate loading completion after 3 seconds
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsLoading(false);
-    }, 5000); // Adjust time as needed
-
-    return () => clearTimeout(timeout);
   }, [setIsLoading]);
 
   return (
-    <motion.div
-      initial={{ opacity: 1 }}
-      animate={{ opacity: 0 }}
-      transition={{ duration: 0.5, delay: 3 }} // Fades out after 3 seconds
-      className="fixed inset-0 flex items-center justify-center bg-white text-gray-800 z-50"
-    >
-      <h1 className="text-3xl font-semibold">
-        {text}
-        <span className="animate-blink">|</span>
-      </h1>
-      <style jsx>{`
-        @keyframes blink {
-          50% { opacity: 0; }
-        }
-        .animate-blink {
-          animation: blink 1s step-start infinite;
-        }
-      `}</style>
-    </motion.div>
+    <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
+      {/* Logo */}
+      <div
+        ref={logoRef}
+        className="absolute flex items-center justify-center z-40 space-x-12"
+      >
+        {/* Pink Bar (largest) */}
+        <div className="logo-bar h-44 w-8 bg-gradient-to-r from-pink-500 to-pink-600 rounded-full"></div>
+        {/* Orange Bar (medium size) */}
+        <div className="logo-bar h-32 w-6 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full"></div>
+        {/* Blue Bar (smallest) */}
+        <div className="logo-bar h-24 w-4 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full"></div>
+      </div>
+    </div>
   );
 }

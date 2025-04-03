@@ -36,7 +36,7 @@ export default function Portfolio() {
   }, [isLoading]);
 
   return (
-    <Layout className="h-[800px] overflow-y-scroll">
+    <Layout className="h-full">
       
       <Content className="w-full p-6">
         {isLoading ? (
@@ -57,7 +57,7 @@ export default function Portfolio() {
                 </video>
 
   
-               <div className="absolute top-0 left-0 w-full h-full bg-black/40 z-10"></div>
+               <div className="absolute top-0 left-0 w-full h-full bg-black/30 z-10"></div>
 
   
                     <div className="relative z-20 text-white">
