@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { Layout } from "antd";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface Article {
   title: string;
@@ -30,7 +31,7 @@ export default function Blog() {
       <Content className="w-full p-4">
         <div className="max-w-4xl mx-auto p-6 mt-14">
           <h1 className="text-2xl font-bold mb-4">
-            While you're here, check out the latest happenings in the world of tech
+            While you are here, check out the latest happenings in the world of tech
           </h1>
 
           {/* Grid container */}
@@ -45,7 +46,7 @@ export default function Blog() {
                 viewport={{ once: true }}
               >
                 {article.urlToImage && (
-                  <img
+                  <Image
                     src={article.urlToImage}
                     alt={article.title}
                     className="w-full h-40 object-cover rounded"
