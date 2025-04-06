@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Layout, Button } from "antd";
 import { motion } from "framer-motion";
 import LazyVideo from "../components/lazyvideo";
+import { BugOutlined } from "@ant-design/icons";
 
 const projects = [
   {
@@ -132,7 +133,18 @@ export default function Projects() {
             <p className="mt-4 text-lg font-semibold">{selectedProject.title}</p>
             <p className="text-gray-600">{selectedProject.description}</p>
           </div>
+
+          
         </div>
+
+        <div className="flex justify-center mt-6">
+          <a
+                href="/skills"
+                className="inline-block text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition"
+              >
+              <BugOutlined className="mx-2"/> Here are some of the languages and tools I used to create this
+              </a>
+          </div>
       </Content>
     </Layout>
   );
