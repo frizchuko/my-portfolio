@@ -57,7 +57,7 @@ export default function Portfolio() {
                 </video>
 
   
-               <div className="absolute top-0 left-0 w-full h-full bg-black/30 z-10"></div>
+               <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-10"></div>
 
   
                     <div className="relative z-20 text-white">
@@ -102,10 +102,10 @@ export default function Portfolio() {
             {/* Contact Section */}
             <section className="py-16 ">
               <div className="max-w-5xl mx-auto text-center">
-                <h2 className="text-3xl font-semibold text-gray-800">Get in Touch</h2>
+                <h2 className="text-xl font-semibold text-gray-800">Some things to know about me</h2>
                
                 <div className="flex justify-center gap-4 mt-6">
-                  <Button icon={<ArrowRightOutlined />} shape="circle"  onClick={() => router.push("/contact")}/>
+                  <Button icon={<ArrowRightOutlined />} shape="circle"  onClick={() => router.push("/about")}/>
                   {/* <Button icon={<LinkedinOutlined />} shape="circle" />
                   <Button icon={<MailOutlined />} shape="circle" /> */}
                 </div>

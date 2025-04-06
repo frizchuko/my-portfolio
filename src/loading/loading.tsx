@@ -45,9 +45,9 @@ export default function Loading({ setIsLoading }: LoadingProps) {
         {/* Pink Bar (largest) */}
         <div className="logo-bar h-44 w-8 bg-gradient-to-r from-pink-500 to-pink-600 rounded-full"></div>
         {/* Orange Bar (medium size) */}
-        <div className="logo-bar h-32 w-6 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full"></div>
+        <div className="logo-bar h-28 w-6 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full"></div>
         {/* Blue Bar (smallest) */}
-        <div className="logo-bar h-24 w-4 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full"></div>
+        <div className="logo-bar h-20 w-4 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full"></div>
       </div>
     </div>
   );

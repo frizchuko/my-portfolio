@@ -11,8 +11,10 @@ import {
   JavaScriptOutlined,
   CodeSandboxOutlined,
   AntDesignOutlined,
+  CustomerServiceOutlined,
 } from "@ant-design/icons";
 import { FaCss3Alt } from "react-icons/fa";
+import { FaHeadphonesSimple } from "react-icons/fa6";
 
 const skills = [
   { name: "HTML5", icon: Html5Outlined, level: "Advanced", color: "#000000"},
@@ -60,6 +62,15 @@ export default function Skills() {
           );
         })}
       </div>
+
+      <div className="flex justify-center mt-6">
+          <a
+                href="/contact"
+                className="inline-block  text-blue-600 text-nowrap px-6 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition"
+              >
+              < CustomerServiceOutlined className="mx-2"/> So, let's talk!
+              </a>
+          </div>
     </section>
   );
 }

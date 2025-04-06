@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Layout, Card} from "antd";
-import {FilePdfOutlined, ShareAltOutlined} from "@ant-design/icons"
+import { ShareAltOutlined} from "@ant-design/icons"
 
 const { Content } = Layout;
 
@@ -28,12 +28,7 @@ const AboutSection = () => {
                    I am all about making things work smoothly for people.
               </p>
               
-              <a
-                href="/projects"
-                className="inline-block bg-gray-800 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-gray-700 transition"
-              >
-               <ShareAltOutlined className="mx-2"/>  My Projects
-              </a>
+             
               
               
             </div>
@@ -56,21 +51,23 @@ const AboutSection = () => {
             {/*stats*/}
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
               {[
-                { index: 1, title: "3 years +", content: "Experience" },
+                { index: 1, title: "3 years +", content: "Experience", },
                 {
                   index: 2,
                   title: "Twenty Two",
                   content: "Projects and counting",
+                  
                 },
-                { index: 3, title: "500+", content: "Positive reviews" },
-                { index: 4, title: "50+", content: "Retained clients" },
+                { index: 3, title: "500+", content: "Positive reviews", },
+                { index: 4, title: "50+", content: "Retained clients",  },
               ].map(
                 (
-                  { index, title, content } // Correct destructuring
+                  { index, title, content, } 
                 ) => (
                   <Card
                     key={index}
                     className="hover:shadow-lg transition-shadow"
+
                   >
                     <h3 className="text-xl font-semibold">{title}</h3>
                     <p className="text-gray-600">{content}</p>{" "}
@@ -82,15 +79,13 @@ const AboutSection = () => {
           </div>
         </section>
         <section>
-          <div className="flex justify-center ">
+          <div className="flex justify-center mt-6">
           <a
-            href="YOUR_GOOGLE_DOCS_LINK"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-gray-50 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition"
-          >
-           <FilePdfOutlined /> View My Resume
-          </a>
+                href="/projects"
+                className="inline-block bg-gray-800 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-gray-700 transition"
+              >
+              <ShareAltOutlined className="mx-2"/>  Here are some of my Projects 
+              </a>
           </div>
           
         </section>
