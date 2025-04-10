@@ -17,11 +17,11 @@ export default function Sidebar({ closeDrawer }: { closeDrawer?: () => void }) {
   const pathname = usePathname();
 
   const links = [
-    { href: "/", label: "Home", icon: HomeOutlined, color: "#32CD32" }, // Lime Green
-    { href: "/about", label: "About Me", icon: UserDeleteOutlined, color: "#676767" }, // Sky Blue
-    { href: "/projects", label: "My Projects", icon: ShareAltOutlined, color: "#FFD700" }, // Lemon Yellow
-    { href: "/skills", label: "My Stack", icon: BugOutlined, color: "#4682B4" }, // Steel Blue
-    { href: "/contact", label: "Contact Me", icon: CustomerServiceOutlined, color: "#FF69B4" }, // Pink
+    { href: "/", label: "Home", icon: HomeOutlined, color: "#32CD32" }, 
+    { href: "/about", label: "About Me", icon: UserDeleteOutlined, color: "#0000FF" }, 
+    { href: "/projects", label: "My Projects", icon: ShareAltOutlined, color: "#FFD700" }, 
+    { href: "/skills", label: "My Stack", icon: BugOutlined, color: "#4682B4" }, 
+    { href: "/contact", label: "Contact Me", icon: CustomerServiceOutlined, color: "#FF69B4" }, 
     { href: "/blog", label: "My Blog", icon: BookOutlined, color: "#5C4033" },
   ];
 
