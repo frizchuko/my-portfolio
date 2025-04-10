@@ -5,9 +5,6 @@ import { Form, Input, message, Select, DatePicker, Slider, Button } from "antd";
 import {
   ArrowRightOutlined,
   BookOutlined,
-  GithubOutlined,
-  LinkedinOutlined,
-  MailOutlined,
 } from "@ant-design/icons";
 import Image from "next/image";
 import { useState } from "react";
