@@ -28,28 +28,33 @@ export default function Blog() {
   const [comments, setComments] = useState<string[]>([]);
   const [newComment, setNewComment] = useState("");
 
-  // Fetch external articles
+  
   useEffect(() => {
     async function fetchNews() {
       setLoading(true);
       try {
         const response = await fetch(`/api/news?page=${page}`);
         const data = await response.json();
-
+  
         if (!response.ok) throw new Error(data.error || "Failed to fetch news");
-
+  
         setArticles(data.articles);
         setError("");
-      } catch (err: any) {
-        setError(err.message || "Something went wrong fetching news.");
+      } catch (err: unknown) {
+        if (err instanceof Error) {
+          setError(err.message || "Something went wrong fetching news.");
+        } else {
+          setError("Something went wrong fetching news.");
+        }
       } finally {
         setLoading(false);
       }
     }
     fetchNews();
   }, [page]);
+  
 
-  // Determine article to show based on 7-day intervals
+  
   useEffect(() => {
     const startDateKey = "blogStartDate";
     const storedDate = localStorage.getItem(startDateKey);
