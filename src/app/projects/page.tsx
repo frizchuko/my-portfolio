@@ -85,7 +85,7 @@ export default function Projects() {
       <Content className="w-full p-4">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-12 p-6 max-w-6xl mx-auto mt-6 py-12 md:px-16">
           {/* Left Column */}
-          <div className="col-span-1 space-y-4 h-full overflow-y-hidden">
+          <div className="col-span-1 space-y-4 h-full overflow-y-hidden mx-auto">
             <motion.div
               key={currentPage} // Triggers re-animation
               initial={{ opacity: 0, y: 10 }}

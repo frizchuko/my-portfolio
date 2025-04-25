@@ -8,7 +8,7 @@ interface LoadingProps {
 }
 
 export default function Loading({ setIsLoading }: LoadingProps) {
-  const logoRef = useRef<HTMLDivElement>(null); // Reference for the logo container
+  const logoRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (logoRef.current) {
@@ -18,7 +18,7 @@ export default function Loading({ setIsLoading }: LoadingProps) {
         x: -100, // Bars start from the left
         stagger: 0.2, // Stagger the appearance of each bar
         duration: 1,
-        delay: 1, // Delay before starting the animation (after page loads)
+        delay: 1, 
         onComplete: () => {
           // Simulate loading completion after the logo is formed
           gsap.set(logoRef.current, { scale: 1 }); // Reset the scale to 1 before zooming in

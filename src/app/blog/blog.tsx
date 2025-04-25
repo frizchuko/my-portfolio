@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from "react";
-import { Layout, Input, Button } from "antd";
+import { Layout, Input, Button, Skeleton } from "antd";
 import { motion } from "framer-motion";
 import ReactMarkdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
@@ -21,6 +21,8 @@ const { TextArea } = Input;
 
 export default function Blog() {
   const [articles, setArticles] = useState<Article[]>([]);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [articleIndex, setArticleIndex] = useState(0);
   const [comments, setComments] = useState<string[]>([]);
@@ -29,9 +31,20 @@ export default function Blog() {
   // Fetch external articles
   useEffect(() => {
     async function fetchNews() {
-      const response = await fetch(`/api/news?page=${page}`);
-      const data = await response.json();
-      setArticles(data.articles);
+      setLoading(true);
+      try {
+        const response = await fetch(`/api/news?page=${page}`);
+        const data = await response.json();
+
+        if (!response.ok) throw new Error(data.error || "Failed to fetch news");
+
+        setArticles(data.articles);
+        setError("");
+      } catch (err: any) {
+        setError(err.message || "Something went wrong fetching news.");
+      } finally {
+        setLoading(false);
+      }
     }
     fetchNews();
   }, [page]);
@@ -66,7 +79,7 @@ export default function Blog() {
     <Layout className="h-full overflow-y-scroll">
       <Content className="w-full md:p-4 p-0">
         <div className="max-w-6xl mx-auto mt-14 grid grid-cols-1 lg:grid-cols-3 gap-10 md:p-6">
-          
+
           {/* Center column - Blog Article */}
           <div className="lg:col-span-2 flex flex-col items-center">
             <motion.div
@@ -118,36 +131,50 @@ export default function Blog() {
           {/* Right column - News Section */}
           <div>
             <h1 className="text-lg font-bold mb-4">Latest Tech News</h1>
-            <div className="space-y-6">
-              {articles.map((article, index) => (
-                <motion.div
-                  key={index}
-                  className="p-4 rounded-lg bg-white shadow"
-                  initial={{ opacity: 0, x: 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  {article.urlToImage && (
-                    <img
-                      src={article.urlToImage}
-                      alt={article.title}
-                      className="w-full h-40 object-cover rounded"
-                    />
-                  )}
-                  <h2 className="text-md font-semibold mt-2">{article.title}</h2>
-                  <p className="text-sm">{article.description}</p>
-                  <a
-                    href={article.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 underline"
+
+            {loading ? (
+              <div className="space-y-4">
+                {[...Array(3)].map((_, i) => (
+                  <Skeleton active key={i} paragraph={{ rows: 3 }} />
+                ))}
+              </div>
+            ) : error ? (
+              <div className="bg-red-100 text-red-700 p-4 rounded">
+                <strong className="block font-bold mb-1">Error Loading News:</strong>
+                <span>{error}</span>
+              </div>
+            ) : (
+              <div className="space-y-6">
+                {articles.map((article, index) => (
+                  <motion.div
+                    key={index}
+                    className="p-4 rounded-lg bg-white shadow"
+                    initial={{ opacity: 0, x: 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
                   >
-                    Read More
-                  </a>
-                </motion.div>
-              ))}
-            </div>
+                    {article.urlToImage && (
+                      <img
+                        src={article.urlToImage}
+                        alt={article.title}
+                        className="w-full h-40 object-cover rounded"
+                      />
+                    )}
+                    <h2 className="text-md font-semibold mt-2">{article.title}</h2>
+                    <p className="text-sm">{article.description}</p>
+                    <a
+                      href={article.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 underline"
+                    >
+                      Read More
+                    </a>
+                  </motion.div>
+                ))}
+              </div>
+            )}
 
             {/* Pagination */}
             <div className="flex justify-between mt-4">
