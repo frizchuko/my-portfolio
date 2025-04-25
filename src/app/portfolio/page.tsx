@@ -30,10 +30,17 @@ export default function Portfolio() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (!isLoading) {
-      console.log('Loading completed, showing home page');
+    const hasLoaded = sessionStorage.getItem("hasLoaded");
+  
+    if (hasLoaded) {
+      setIsLoading(false); // Skip the loader if already loaded
+    } else {
+      setTimeout(() => {
+        setIsLoading(false);
+        sessionStorage.setItem("hasLoaded", "true"); // Mark as loaded
+      }, 3000); 
     }
-  }, [isLoading]);
+  }, []);
 
   return (
     <Layout className="h-full">
