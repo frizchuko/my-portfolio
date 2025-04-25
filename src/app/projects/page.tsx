@@ -10,21 +10,21 @@ const projects = [
     id: 1,
     title: "ModeOne Group",
     video: "/cmp.mp4",
-    description: "Developed using HTML5, CSS3, Bootstrap, JavaScript, and jQuery, ensuring a responsive and visually appealing design. The site features a modern layout with smooth animations, interactive elements, and optimized performance for an intuitive user experience. Leveraging Bootstrap’s grid system. The site is structured with clean, maintainable code, enhancing both functionality and scalability.",
+    description: "Developed using HTML5, CSS3, Bootstrap, JavaScript, and jQuery, ensuring a responsive and visually appealing design. The site features a modern layout with smooth animations, interactive elements, and optimized performance for an intuitive user experience. Leveraging Bootstrap's grid system. The site is structured with clean, maintainable code, enhancing both functionality and scalability.",
     poster: "/lazyload.jpg"
   },
   {
     id: 2,
     title: "Qol Labs",
     video: "/cmp.mp4",
-    description: "A brief description of Project Two.",
+    description: "I developed qollabs.com using React.js and Tailwind CSS, focusing on a clean, modern UI and a responsive layout optimized for performance across devices. The site highlights Qollabs’ innovation-driven services with smooth user interactions, scalable components, and well-structured content. I prioritized speed, accessibility, and a developer-friendly codebase to ensure long-term maintainability.",
     poster: "/lazyload.jpg"
   },
   {
     id: 3,
     title: "Zuojoff",
-    video: "/nightsky.mp4",
-    description: "A brief description of Qol.",
+    video: "/zuojoff.mp4",
+    description: "I developed zuojoffservices.com for Zuojoff Nigeria Limited, creating a sleek, responsive business website that effectively showcases the services offered by the company. The site was built using HTML, CSS, JavaScript, jQuery, and Bootstrap, ensuring a clean, mobile-friendly user interface with smooth interactions. I focused on performance optimization, intuitive navigation, and brand consistency, while also applying best practices in SEO and accessibility to enhance user engagement.    .",
     poster: "/lazyload.jpg"
   },
   {
