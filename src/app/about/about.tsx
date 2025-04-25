@@ -38,7 +38,7 @@ const AboutSection = () => {
           <div className="w-full p-4 md:w-1/2  overflow-hidden ">
             <video
               className="w-full h-auto rounded-xl"
-              src="/nightsky.mp4"
+              src="/zuojoff.mp4"
               autoPlay
               loop
               muted
