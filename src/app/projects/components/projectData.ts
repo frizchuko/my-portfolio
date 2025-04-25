@@ -9,13 +9,13 @@ export const projects = [
         id: 2,
         title: "Qol Labs",
         video: "/nightsky.mp4",
-        description: "A brief description of Project Two."
+        description: "I developed qollabs.com using React.js and Tailwind CSS, focusing on a clean, modern UI and a responsive layout optimized for performance across devices. The site highlights..."
       },
       {
         id: 3,
         title: "Zuojoff",
-        video: "/nightsky.mp4",
-        description: "A brief description of Qol."
+        video: "/zuojoff.mp4",
+        description: "I developed zuojoffservices.com for Zuojoff Nigeria Limited, creating a sleek,...."
       },
       {
         id: 4,
