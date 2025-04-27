@@ -42,12 +42,42 @@ export default function Loading({ setIsLoading }: LoadingProps) {
         ref={logoRef}
         className="absolute flex items-center justify-center z-40 space-x-12"
       >
-        {/* Pink Bar (largest) */}
-        <div className="logo-bar h-44 w-8 bg-gradient-to-r from-pink-500 to-pink-600 rounded-full"></div>
-        {/* Orange Bar (medium size) */}
-        <div className="logo-bar h-28 w-6 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full"></div>
-        {/* Blue Bar (smallest) */}
-        <div className="logo-bar h-20 w-4 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full"></div>
+        
+ 
+{/* Top horizontal blue bar */}
+<div
+  className="logo-bar h-2 w-16 rounded-lg"
+  style={{ background: 'linear-gradient(to right, #2563eb, #334155)' }}
+></div>
+
+{/* First vertical bar (largest, dark gray) */}
+<div
+  className="logo-bar h-44 w-8 rounded-full"
+  style={{ background: 'linear-gradient(to right, #334155, #334155)' }}
+></div>
+
+{/* Second vertical bar (medium size, dark gray) */}
+<div
+  className="logo-bar h-28 w-6 rounded-full"
+  style={{ background: 'linear-gradient(to right, #334155, #334155)' }}
+></div>
+
+{/* Third vertical bar (smallest, dark gray) */}
+<div
+  className="logo-bar h-20 w-4 rounded-full"
+  style={{ background: 'linear-gradient(to right, #334155, #334155)' }}
+></div>
+
+{/* Bottom horizontal blue bar */}
+<div
+  className="logo-bar h-2 w-16 rounded-lg"
+  style={{ background: 'linear-gradient(to right, #2563eb, #334155)' }}
+></div>
+
+
+
+
+
       </div>
     </div>
   );
