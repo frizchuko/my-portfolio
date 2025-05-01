@@ -213,7 +213,7 @@ export default function ContactPage() {
 
       <section className="py-4">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl font-semibold text-gray-800">
+          <h2 className="text-xl font-semibold text-gray-800">
             Want to see something new?
           </h2>
           <p className="text-gray-600 mt-2">
