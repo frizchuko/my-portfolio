@@ -26,11 +26,14 @@ export default function Navbar() {
   return (
     <>
       {/* Navbar */}
-      <nav className="bg-white shadow-md py-4 px-6 fixed top-0 w-full z-50">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <Link href="/" className="text-base flex flex-row text-gray-700">
-            <Image src="/logo.png" alt="logo" width="160" height="144"/>
+      <nav className="bg-white shadow-md py-4 lg:px-14 fixed top-0 w-full z-50">
+        <div className=" mx-auto flex justify-between items-center ">
+          <div className="text-base text-start flex flex-row text-gray-700 mr-12">
+          <Link href="/">
+            <Image src="/logo.png" alt="logo" width="42" height="47"/>
           </Link>
+          </div>
+         
           {/* Show Drawer for Mobile */}
           <div className="lg:hidden md:hidden">
             <Button type="text" icon={<MenuOutlined />} onClick={() => setOpen(true)} />
