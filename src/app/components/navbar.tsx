@@ -26,12 +26,20 @@ export default function Navbar() {
   return (
     <>
       {/* Navbar */}
-      <nav className="bg-white shadow-md py-4 lg:px-14 fixed top-0 w-full z-50">
+      <nav className="bg-white shadow-md py-4 lg:px-14 !px-12 fixed top-0 w-full z-50">
         <div className=" mx-auto flex justify-between items-center ">
-          <div className="text-base text-start flex flex-row text-gray-700 mr-12">
+          <div className="hidden text-base lg:flex flex-row text-gray-700 ">
           <Link href="/">
             <Image src="/logo.png" alt="logo" width="42" height="47"/>
           </Link>
+
+          </div>
+
+          <div className="md:hidden  text-base flex flex-row text-gray-700 ">
+          <Link href="/">
+            <Image src="/logo.png" alt="logo" width="36" height="40"/>
+          </Link>
+          
           </div>
          
           {/* Show Drawer for Mobile */}
