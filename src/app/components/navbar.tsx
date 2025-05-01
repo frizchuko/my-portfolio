@@ -29,7 +29,7 @@ export default function Navbar() {
       <nav className="bg-white shadow-md py-4 px-6 fixed top-0 w-full z-50">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <Link href="/" className="text-base flex flex-row text-gray-700">
-            <Image src="/newlogo.jpg" alt="logo" width="160" height="144"/>
+            <Image src="/logo.png" alt="logo" width="160" height="144"/>
           </Link>
           {/* Show Drawer for Mobile */}
           <div className="lg:hidden md:hidden">
