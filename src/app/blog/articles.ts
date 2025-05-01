@@ -16,8 +16,27 @@ const articles = [
   `,
       author: "Bimbim",
     },
+   
     {
       id: 2,
+      title: "Why Tailwind CSS is Taking Over Frontend",
+      content: `
+  Tailwind CSS is a utility-first CSS framework that allows rapid UI development.
+  
+  ### Example
+  
+  \`\`\`html
+  <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    Click me
+  </button>
+  \`\`\`
+  
+  Tailwind removes the need for writing custom CSS in many cases.
+  `,
+      author: "Jane Doe",
+    },
+    {
+      id: 3,
       title: "Debugging: A Comprehensive Guide for Developers",
       content: `
       <article className="prose max-w-4xl mx-auto">
@@ -239,24 +258,6 @@ const articles = [
     </article>
   `,
       author: "C.Christian",
-    },
-    {
-      id: 3,
-      title: "Why Tailwind CSS is Taking Over Frontend",
-      content: `
-  Tailwind CSS is a utility-first CSS framework that allows rapid UI development.
-  
-  ### Example
-  
-  \`\`\`html
-  <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-    Click me
-  </button>
-  \`\`\`
-  
-  Tailwind removes the need for writing custom CSS in many cases.
-  `,
-      author: "Jane Doe",
     },
     {
       id: 4,

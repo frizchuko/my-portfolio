@@ -29,39 +29,26 @@ const projects = [
   },
   {
     id: 4,
-    title: "Zuojoff",
+    title: "Madiba",
     video: "/cmp.mp4",
-    description: "A brief description of Zuojoff.",
+    description: "Madiba hotel website.",
     poster: "/lazyload.jpg"
   },
   {
     id: 5,
-    title: "Project Five",
+    title: "NeedFocus",
     video: "/nightsky.mp4",
-    description: "A brief description of Project Five.",
+    description: "NeedFocus...",
     poster: "/lazyload.jpg"
   },
   {
     id: 6,
-    title: "Project Six",
+    title: "Lewx Exchange",
     video: "/cmp.mp4",
-    description: "A brief description of Project Six.",
-    poster: "/lazyload.jpg"
-  },
-  {
-    id: 7,
-    title: "Project Seven",
-    video: "/nightsky.mp4",
-    description: "A brief description of Project Seven.",
-    poster: "/lazyload.jpg"
-  },
-  {
-    id: 8,
-    title: "Project Eight",
-    video: "/cmp.mp4",
-    description: "A brief description of Project Eight.",
+    description: "Lewx Exchange.",
     poster: "/lazyload.jpg"
   }
+
 ];
 
 const { Content } = Layout;
