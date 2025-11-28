@@ -46,8 +46,8 @@ export default function Loading({ setIsLoading }: LoadingProps) {
  
 {/* Top horizontal blue bar */}
 <div
-  className="logo-bar h-2 w-16 rounded-lg"
-  style={{ background: 'linear-gradient(to right, #2563eb, #334155)' }}
+  className="logo-bar h-2 w-16 rounded-lg bg-blue-600"
+  // style={{ background: 'linear-gradient(to right, #2563eb, #334155)' }}
 ></div>
 
 {/* First vertical bar (largest, dark gray) */}

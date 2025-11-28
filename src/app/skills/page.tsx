@@ -13,6 +13,7 @@ import {
   AntDesignOutlined,
   CustomerServiceOutlined,
 } from "@ant-design/icons";
+import { TbBrandRedux } from "react-icons/tb";
 import { FaCss3Alt } from "react-icons/fa";
 
 
@@ -22,9 +23,10 @@ const skills = [
   { name: "JavaScript", icon: JavaScriptOutlined , level: "Advanced", color: "#FFD700" }, 
   { name: "Next.js", icon: CodeOutlined, level: "Advanced", color: "#32CD32" }, 
   { name: "React.js", icon: CodeOutlined, level: "Advanced", color: "#87CEEB" }, 
+  {name: "Node.js", icon: CodeOutlined, level: "Intermediate", color: "#32CD32"},
   { name: "TypeScript", icon: ApiOutlined, level: "Intermediate", color: "#FFA500" }, 
   { name: "Tailwind CSS", icon: ToolOutlined, level: "Advanced", color: "#FF69B4" }, 
-
+   {name: "Redux", icon: TbBrandRedux, level: "Advanced", color: "#000000"},
   { name: "Ant Design", icon: AntDesignOutlined, level: "Advanced", color: "#FF69B4"},
   { name: "Bootstrap", icon: CodeSandboxOutlined, level: "Advanced", color: "#87CEEB"},
   { name: "Git & GitHub", icon: GithubOutlined, level: "Intermediate", color: "#800080" },

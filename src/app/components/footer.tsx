@@ -1,8 +1,8 @@
 'use client';
 import Float from "./floatbutton";
-import Image from "next/image";
 import Link from "next/link";
 import MailingUnit from "./mailingunit";
+import Logo from "./logo";
 export default function Footer() {
     return (
       <footer className="bg-black text-white py-4 mt-auto">
@@ -13,7 +13,7 @@ export default function Footer() {
       
       {/* Logo (Always at the Top Left on Large Screens) */}
       <div className="flex justify-center md:justify-start mb-4 md:mb-0">
-        <Image src="/logo.png" alt="logo" width={86} height={76} />
+      <Logo mode="dark" className="h-24 w-48"/>
       </div>
 
       {/* Links & Email Input: Column on Small Screens, Row on Large */}
@@ -22,11 +22,11 @@ export default function Footer() {
           
           {/* Navigation Links */}
           <div className="flex flex-wrap justify-center md:justify-start space-x-6 mb-4 md:mb-0">
-            <Link href="/about" className="text-green-300 hover:text-green-600">about</Link>
-            <Link href="/projects" className="text-blue-500 hover:text-blue-800">projects</Link>
-            <Link href="/skills" className="text-yellow-300 hover:text-yellow-600">stack</Link>
-            <Link href="/contact" className="text-pink-400 hover:text-pink-600">contact</Link>
-            <Link href="/blog" className="text-gray-50 hover:text-gray-400">blog</Link>
+            <Link href="/about" className="text-blue-500 hover:text-blue-600">about</Link>
+            <Link href="/projects" className="text-blue-500 hover:text-blue-600">projects</Link>
+            <Link href="/skills" className="text-blue-500 hover:text-blue-600">stack</Link>
+            <Link href="/contact" className="text-blue-500 hover:text-blue-600">contact</Link>
+            <Link href="/blog" className="text-blue-500 hover:text-blue-600">blog</Link>
 
           </div>
 
@@ -41,7 +41,7 @@ export default function Footer() {
         <hr className="my-4 border-gray-50" />
 
         {/* Copyright Section */}
-        <div className="text-center mt-2 text-blue-300">
+        <div className="text-center mt-2 text-blue-500">
           <p>&copy; {new Date().getFullYear()} My Portfolio. All rights reserved.</p>
           <a href="https://storyset.com/people" className="text-muted text-black">People illustrations by Storyset</a>
         </div>

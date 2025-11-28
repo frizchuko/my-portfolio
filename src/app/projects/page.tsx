@@ -4,51 +4,47 @@ import { Layout, Button } from "antd";
 import { motion } from "framer-motion";
 import LazyVideo from "../components/lazyvideo";
 import { BugOutlined } from "@ant-design/icons";
+import Link from "next/link";
 
 const projects = [
   {
     id: 1,
     title: "ModeOne Group",
     video: "/cmp.mp4",
-    description: "Developed using HTML5, CSS3, Bootstrap, JavaScript, and jQuery, ensuring a responsive and visually appealing design. The site features a modern layout with smooth animations, interactive elements, and optimized performance for an intuitive user experience. Leveraging Bootstrap's grid system. The site is structured with clean, maintainable code, enhancing both functionality and scalability.",
-    poster: "/lazyload.jpg"
+    description:
+      "Developed using HTML5, CSS3, Bootstrap, JavaScript, and jQuery, ensuring a responsive and visually appealing design. This site features a modern layout with smooth animations, interactive elements, and optimized performance for an intuitive user experience. Leveraging Bootstrap's grid system. The site is structured with clean, maintainable code, enhancing both functionality and scalability.",
+    poster: "/lazyload.jpg",
+    url: "https://www.modeonegroup.com",
   },
   {
     id: 2,
-    title: "Qol Labs",
-    video: "/cmp.mp4",
-    description: "I developed qollabs.com using React.js and Tailwind CSS, focusing on a clean, modern UI and a responsive layout optimized for performance across devices. The site highlights Qollabs’ innovation-driven services with smooth user interactions, scalable components, and well-structured content. I prioritized speed, accessibility, and a developer-friendly codebase to ensure long-term maintainability.",
-    poster: "/lazyload.jpg"
+    title: "Company E-commerce Web app",
+    video: "/eticon.mp4",
+    description:
+      "This company E-commerce web app was built for ETICON ENERGY, a company that sells energy producing equipments and support items. The app was built using Next.js and Tailwind CSS, focusing on a clean, modern UI and a responsive layout optimized for performance across devices. The site highlights Qollabs’ innovation-driven services with smooth user interactions, scalable components, and well-structured content. I prioritized speed, accessibility, and a developer-friendly codebase to ensure long-term maintainability.",
+    poster: "/eticon.jpg",
+    url: "https://www.eticonenergy.com",
   },
+
   {
     id: 3,
-    title: "Zuojoff",
-    video: "/zuojoff.mp4",
-    description: "I developed zuojoffservices.com for Zuojoff Nigeria Limited, creating a sleek, responsive business website that effectively showcases the services offered by the company. The site was built using HTML, CSS, JavaScript, jQuery, and Bootstrap, ensuring a clean, mobile-friendly user interface with smooth interactions. I focused on performance optimization, intuitive navigation, and brand consistency, while also applying best practices in SEO and accessibility to enhance user engagement.    .",
-    poster: "/lazyload.jpg"
+    title: "Multi-layout E-commerce web app",
+    video: "/shoppax.mp4",
+    description:
+      "  A multi-layer e-commerce web app built as ready-to-use e-commerce templates for businesses. Stack is Next.js, Tailwind CSS, ant design components, Redux and other dependencies. ",
+    poster: "/shoppax.jpg",
+    url: "https://www.shoppax.vercel.app",
   },
+
   {
     id: 4,
-    title: "Madiba",
-    video: "/cmp.mp4",
-    description: "Madiba hotel website.",
-    poster: "/lazyload.jpg"
+    title: "Zuojoff",
+    video: "/zuojoff.mp4",
+    description:
+      "I developed zuojoffservices.com for Zuojoff Nigeria Limited, creating a sleek, responsive business website that effectively showcases the services offered by the company. The site was built using HTML, CSS, JavaScript, jQuery, and Bootstrap, ensuring a clean, mobile-friendly user interface with smooth interactions. I focused on performance optimization, intuitive navigation, and brand consistency, while also applying best practices in SEO and accessibility to enhance user engagement.    .",
+    poster: "/lazyload.jpg",
+    url: "https://www.zuojoffservices.com",
   },
-  {
-    id: 5,
-    title: "NeedFocus",
-    video: "/nightsky.mp4",
-    description: "NeedFocus...",
-    poster: "/lazyload.jpg"
-  },
-  {
-    id: 6,
-    title: "Lewx Exchange",
-    video: "/cmp.mp4",
-    description: "Lewx Exchange.",
-    poster: "/lazyload.jpg"
-  }
-
 ];
 
 const { Content } = Layout;
@@ -64,7 +60,8 @@ export default function Projects() {
     (currentPage + 1) * projectsPerPage
   );
 
-  const nextPage = () => setCurrentPage((prev) => Math.min(prev + 1, totalPages - 1));
+  const nextPage = () =>
+    setCurrentPage((prev) => Math.min(prev + 1, totalPages - 1));
   const prevPage = () => setCurrentPage((prev) => Math.max(prev - 1, 0));
 
   return (
@@ -89,12 +86,23 @@ export default function Projects() {
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ duration: 0.6, ease: "easeOut" }}
                 >
-                  <video 
-                    src={project.video} 
-                    className="w-full h-full object-cover rounded-lg" 
-                    muted 
+                  <video
+                    src={project.video}
+                    className="w-full h-full object-cover rounded-lg"
+                    muted
                   />
                   <p className="mt-2 text-sm text-center">{project.title}</p>
+                  <div className="flex justify-center ">
+                  <Link
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 text-sm !text-center !text-black/70"
+                  >
+                    {project.url}
+                  </Link>
+                  </div>
+                
                 </motion.div>
               ))}
             </motion.div>
@@ -102,12 +110,18 @@ export default function Projects() {
             {/* Pagination Buttons */}
             <div className="flex justify-between mt-4">
               {currentPage > 0 && (
-                <Button onClick={prevPage} className="bg-gray-800 text-white px-4 py-2 rounded-md">
+                <Button
+                  onClick={prevPage}
+                  className="bg-gray-800 text-white px-4 py-2 rounded-md"
+                >
                   Back
                 </Button>
               )}
               {currentPage < totalPages - 1 && (
-                <Button onClick={nextPage} className="bg-gray-800 text-white px-4 py-2 rounded-md">
+                <Button
+                  onClick={nextPage}
+                  className="bg-gray-800 text-white px-4 py-2 rounded-md"
+                >
                   Next
                 </Button>
               )}
@@ -116,22 +130,28 @@ export default function Projects() {
 
           {/* Right Column */}
           <div className="col-span-2 flex flex-col items-center my-14">
-          <LazyVideo key={selectedProject.id} src={selectedProject.video} poster={selectedProject.poster} autoPlay />
-            <p className="mt-4 text-lg font-semibold">{selectedProject.title}</p>
+            <LazyVideo
+              key={selectedProject.id}
+              src={selectedProject.video}
+              poster={selectedProject.poster}
+              autoPlay
+            />
+            <p className="mt-4 text-lg font-semibold">
+              {selectedProject.title}
+            </p>
             <p className="text-gray-600">{selectedProject.description}</p>
           </div>
-
-          
         </div>
 
         <div className="flex justify-center mt-6">
           <a
-                href="/skills"
-                className="inline-block text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition"
-              >
-              <BugOutlined className="mx-2"/> Here are some of the languages and tools I used to create this
-              </a>
-          </div>
+            href="/skills"
+            className="inline-block text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition"
+          >
+            <BugOutlined className="mx-2" /> Here are some of the languages and
+            tools I used to create this
+          </a>
+        </div>
       </Content>
     </Layout>
   );

@@ -8,7 +8,8 @@ import { MenuOutlined, UserDeleteOutlined,
   
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
+
+import Logo from "./logo";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -28,16 +29,17 @@ export default function Navbar() {
       {/* Navbar */}
       <nav className="bg-white shadow-md py-4 lg:px-14 !px-12 fixed top-0 w-full z-50">
         <div className=" mx-auto flex justify-between items-center ">
-          <div className="hidden text-base lg:flex flex-row text-gray-700 ">
-          <Link href="/">
-            <Image src="/logo.png" alt="logo" width="42" height="47"/>
-          </Link>
+          <div className="hidden text-base lg:flex flex-row text-gray-700 ml-10">
+            <Link href="/">
+            <Logo mode="light" className="h-12 w-24"/>
+            </Link>
+          
 
           </div>
 
           <div className="md:hidden  text-base flex flex-row text-gray-700 ">
           <Link href="/">
-            <Image src="/logo.png" alt="logo" width="36" height="40"/>
+          <Logo mode="light" className="h-12 w-24"/>
           </Link>
           
           </div>
@@ -56,7 +58,7 @@ export default function Navbar() {
   onClose={() => setOpen(false)}
   open={open}
   width={280}
-  closable={false}
+  closable
   className="!p-0"
   bodyStyle={{ padding: 0 }}
 >
@@ -69,8 +71,8 @@ export default function Navbar() {
             key={href}
             className={`my-4 mx-auto rounded-lg py-8 px-12 transition-all flex items-center space-x-3 ${
               isActive
-                ? `bg-gray-200 translate-x-[10px] ${color} font-bold`
-                : "bg-white hover:bg-gray-100 text-neutral-700"
+                ? `bg-gray-100 translate-x-[10px] ${color} font-bold`
+                : "bg-white hover:bg-gray-50 text-blue-600"
             }`}
           >
             <Link
@@ -80,12 +82,12 @@ export default function Navbar() {
             >
               <IconComponent
                 className={`text-xl transform transition-all duration-300 group-hover:scale-110 group-hover:translate-x-1 ${
-                  isActive ? color : "text-neutral-500 group-hover:text-black"
+                  isActive ? color : "text-blue-400 group-hover:text-blue-400"
                 }`}
               />
               <span
                 className={`text-[1.1rem] font-semibold transition-colors duration-300 ${
-                  isActive ? color : "text-neutral-700 group-hover:text-black"
+                  isActive ? color : "text-blue-400 group-hover:text-blue-400"
                 }`}
               >
                 {label}
