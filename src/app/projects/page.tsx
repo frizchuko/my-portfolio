@@ -32,7 +32,7 @@ const projects = [
     video: "/shpx.mp4",
     description:
       "  A multi-layer e-commerce web app built as ready-to-use e-commerce templates for businesses. Stack is Next.js, Tailwind CSS, ant design components, Redux and other dependencies. ",
-    poster: "/shoppax.jpg",
+    poster: "/shppax.jpg",
     url: "https://www.shoppax.vercel.app",
   },
 
