@@ -14,7 +14,7 @@ const articles = [
   
   This will start the Storybook UI locally and let you develop your components independently.
   `,
-      author: "Bimbim",
+      author: "Cassey",
     },
    
     {
@@ -33,7 +33,7 @@ const articles = [
   
   Tailwind removes the need for writing custom CSS in many cases.
   `,
-      author: "Jane Doe",
+      author: "Adesuwa",
     },
     {
       id: 3,
@@ -277,7 +277,7 @@ const articles = [
   }
   \`\`\`
   `,
-      author: "Bimbim",
+      author: "Chika.C",
     },
     {
       id: 5,

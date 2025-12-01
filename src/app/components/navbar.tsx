@@ -16,18 +16,18 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const links = [
-    { href: "/", label: "Home", icon: HomeOutlined, color: "#32CD32" }, // Lime Green
-    { href: "/about", label: "About", icon: UserDeleteOutlined, color: "#87CEEB" }, // Sky Blue
-    { href: "/projects", label: "Projects", icon: ShareAltOutlined, color: "#FFD700" }, // Lemon Yellow
-    { href: "/skills", label: "Skills", icon: BugOutlined, color: "#4682B4" }, // Steel Blue
-    { href: "/contact", label: "Contact", icon: CustomerServiceOutlined, color: "#FF69B4" }, // Pink
-    { href: "/blog", label: " Blog", icon: BookOutlined, color: "#262626" },
+    { href: "/", label: "Home", icon: HomeOutlined, color: "text-blue-600" }, 
+    { href: "/about", label: "About", icon: UserDeleteOutlined, color: "text-blue-600" }, 
+    { href: "/projects", label: "Projects", icon: ShareAltOutlined, color: "text-blue-600" }, 
+    { href: "/skills", label: "Skills", icon: BugOutlined, color: "text-blue-600" }, 
+    { href: "/contact", label: "Contact", icon: CustomerServiceOutlined, color: "text-blue-600" }, 
+    { href: "/blog", label: " Blog", icon: BookOutlined, color: "text-blue-600" },
   ];
 
   return (
     <>
       {/* Navbar */}
-      <nav className="bg-white shadow-md py-4 lg:px-14 !px-12 fixed top-0 w-full z-50">
+      <nav className="bg-white  py-4 lg:px-14 !px-12 fixed top-0 w-full z-50">
         <div className=" mx-auto flex justify-between items-center ">
           <div className="hidden text-base lg:flex flex-row text-gray-700 ml-10">
             <Link href="/">
@@ -101,7 +101,7 @@ export default function Navbar() {
 
       <div className="mt-12 mx-auto">
         <a
-          href="YOUR_GOOGLE_DOCS_LINK"
+          href="https://docs.google.com/document/d/1pL0If1qbO5LQpJ5oHNGZQEjOMn_jQa0jsB3EfFS1r1Q/edit?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block text-nowrap text-blue-600 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-gray-300 transition"

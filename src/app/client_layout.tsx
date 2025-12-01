@@ -18,7 +18,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </div>
 
         {/* Main Content */}
-        <main className="flex-grow p-6">{children}</main>
+        <main className="flex-grow p-6 ">{children}</main>
       </div>
 
       {/* Footer (Spans Full Width) */}

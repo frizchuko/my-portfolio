@@ -64,7 +64,7 @@ export default function Sidebar({ closeDrawer }: { closeDrawer?: () => void }) {
 
         <div className="mt-12 mx-auto">
           <a
-            href="YOUR_GOOGLE_DOCS_LINK"
+             href="https://docs.google.com/document/d/1pL0If1qbO5LQpJ5oHNGZQEjOMn_jQa0jsB3EfFS1r1Q/edit?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-nowrap text-blue-400 hover:text-blue-600 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-gray-50 transition"
