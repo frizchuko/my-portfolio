@@ -19,7 +19,7 @@ const projects = [
   {
     id: 2,
     title: "Company E-commerce Web app",
-    video: "/eticon.mp4",
+    video: "/et.mp4",
     description:
       "This company E-commerce web app was built for ETICON ENERGY, a company that sells energy producing equipments and support items. The app was built using Next.js and Tailwind CSS, focusing on a clean, modern UI and a responsive layout optimized for performance across devices. The site highlights Qollabs’ innovation-driven services with smooth user interactions, scalable components, and well-structured content. I prioritized speed, accessibility, and a developer-friendly codebase to ensure long-term maintainability.",
     poster: "/eticon.jpg",
@@ -29,7 +29,7 @@ const projects = [
   {
     id: 3,
     title: "Multi-layout E-commerce web app",
-    video: "/shoppax.mp4",
+    video: "/shoppa.mp4",
     description:
       "  A multi-layer e-commerce web app built as ready-to-use e-commerce templates for businesses. Stack is Next.js, Tailwind CSS, ant design components, Redux and other dependencies. ",
     poster: "/shoppax.jpg",
