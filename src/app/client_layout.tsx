@@ -3,6 +3,7 @@
 import Navbar from "../app/components/navbar";
 import Footer from "../app/components/footer";
 import Sidebar from "../app/components/sidebar"; 
+import GlobalRouteLoader from "./components/global-route-loader";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -18,7 +19,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </div>
 
         {/* Main Content */}
-        <main className="flex-grow p-6 ">{children}</main>
+        <main className="flex-grow lg:p-6 md:p-2 p-0 ">
+          <GlobalRouteLoader/>
+          {children}
+          </main>
       </div>
 
       {/* Footer (Spans Full Width) */}

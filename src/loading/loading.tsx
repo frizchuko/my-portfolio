@@ -46,32 +46,32 @@ export default function Loading({ setIsLoading }: LoadingProps) {
  
 {/* Top horizontal blue bar */}
 <div
-  className="logo-bar h-2 w-16 rounded-lg bg-blue-600"
+  className="logo-bar h-2 lg:w-16 md:w-14 w-12 rounded-lg bg-blue-600"
   // style={{ background: 'linear-gradient(to right, #2563eb, #334155)' }}
 ></div>
 
 {/* First vertical bar (largest, dark gray) */}
 <div
-  className="logo-bar h-44 w-8 rounded-full"
+  className="logo-bar lg:h-44 md:h-36 h-32 lg:w-8 md:w-6 w-4 rounded-full"
   style={{ background: 'linear-gradient(to right, #334155, #334155)' }}
 ></div>
 
 {/* Second vertical bar (medium size, dark gray) */}
 <div
-  className="logo-bar h-28 w-6 rounded-full"
+  className="logo-bar lg:h-28 md:h-24 h-20 lg:w-6 md:w-4 w-3 rounded-full"
   style={{ background: 'linear-gradient(to right, #334155, #334155)' }}
 ></div>
 
 {/* Third vertical bar (smallest, dark gray) */}
 <div
-  className="logo-bar h-20 w-4 rounded-full"
+  className="logo-bar lg:h-20 md:h-16 h-14 md:w-4 w-2 rounded-full"
   style={{ background: 'linear-gradient(to right, #334155, #334155)' }}
 ></div>
 
 {/* Bottom horizontal blue bar */}
 <div
-  className="logo-bar h-2 w-16 rounded-lg"
-  style={{ background: 'linear-gradient(to right, #2563eb, #334155)' }}
+  className="logo-bar h-2 lg:w-16 md:w-14 w-12 rounded-lg bg-blue-600"
+  // style={{ background: 'linear-gradient(to right, #2563eb, #334155)' }}
 ></div>
 
 

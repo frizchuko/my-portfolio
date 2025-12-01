@@ -41,6 +41,8 @@ export default function Portfolio() {
                    autoPlay 
                     loop 
                      muted
+                     playsInline
+                     poster="/lazyload.jpg"
                     >
                <source src="/cmp.mp4" type="video/mp4" />
   

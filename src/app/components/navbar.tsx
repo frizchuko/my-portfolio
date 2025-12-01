@@ -2,10 +2,17 @@
 
 import { useState } from "react";
 import { Drawer, Button } from "antd";
-import { MenuOutlined, UserDeleteOutlined, 
-  ShareAltOutlined, BugOutlined, 
-  CustomerServiceOutlined, HomeOutlined, BookOutlined, FilePdfOutlined } from "@ant-design/icons";
-  
+import {
+  MenuOutlined,
+  UserDeleteOutlined,
+  ShareAltOutlined,
+  BugOutlined,
+  CustomerServiceOutlined,
+  HomeOutlined,
+  BookOutlined,
+  FilePdfOutlined,
+} from "@ant-design/icons";
+
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
@@ -16,103 +23,92 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const links = [
-    { href: "/", label: "Home", icon: HomeOutlined, color: "text-blue-600" }, 
-    { href: "/about", label: "About", icon: UserDeleteOutlined, color: "text-blue-600" }, 
-    { href: "/projects", label: "Projects", icon: ShareAltOutlined, color: "text-blue-600" }, 
-    { href: "/skills", label: "Skills", icon: BugOutlined, color: "text-blue-600" }, 
-    { href: "/contact", label: "Contact", icon: CustomerServiceOutlined, color: "text-blue-600" }, 
-    { href: "/blog", label: " Blog", icon: BookOutlined, color: "text-blue-600" },
+    { href: "/", label: "Home", icon: HomeOutlined },
+    { href: "/about", label: "About", icon: UserDeleteOutlined },
+    { href: "/projects", label: "Projects", icon: ShareAltOutlined },
+    { href: "/skills", label: "Skills", icon: BugOutlined },
+    { href: "/contact", label: "Contact", icon: CustomerServiceOutlined },
+    { href: "/blog", label: "Blog", icon: BookOutlined },
   ];
 
   return (
     <>
-      {/* Navbar */}
-      <nav className="bg-white  py-4 lg:px-14 !px-12 fixed top-0 w-full z-50">
-        <div className=" mx-auto flex justify-between items-center ">
-          <div className="hidden text-base lg:flex flex-row text-gray-700 ml-10">
-            <Link href="/">
-            <Logo mode="light" className="h-12 w-24"/>
-            </Link>
+      {/* NAVBAR */}
+      <nav className="bg-white py-4 px-4 sm:px-6 lg:px-14 fixed top-0 w-full z-50 shadow-sm">
+        <div className="flex justify-between items-center mx-auto">
           
-
-          </div>
-
-          <div className="md:hidden  text-base flex flex-row text-gray-700 ">
-          <Link href="/">
-          <Logo mode="light" className="h-12 w-24"/>
+          {/* Logo */}
+          <Link href="/" className="block">
+            <Logo
+              mode="light"
+              className="h-10 w-auto sm:h-12 transition-all"
+            />
           </Link>
-          
-          </div>
-         
-          {/* Show Drawer for Mobile */}
-          <div className="lg:hidden md:hidden">
-            <Button type="text" icon={<MenuOutlined />} onClick={() => setOpen(true)} />
-          </div>
+
+          {/* Mobile Menu Button */}
+          <Button
+            type="text"
+            icon={<MenuOutlined />}
+            onClick={() => setOpen(true)}
+            className="md:hidden text-xl"
+            aria-label="Open Menu"
+          />
         </div>
       </nav>
 
-      {/* Drawer for Mobile View */}
+      {/* DRAWER */}
       <Drawer
-  title={null}
-  placement="right"
-  onClose={() => setOpen(false)}
-  open={open}
-  width={280}
-  closable
-  className="!p-0"
-  bodyStyle={{ padding: 0 }}
->
-  <div className="p-6 bg-white h-full shadow-md">
-    <div className="flex flex-col space-y-8 mt-12">
-      {links.map(({ href, label, icon: IconComponent, color }) => {
-        const isActive = pathname === href;
-        return (
-          <div
-            key={href}
-            className={`my-4 mx-auto rounded-lg py-8 px-12 transition-all flex items-center space-x-3 ${
-              isActive
-                ? `bg-gray-100 translate-x-[10px] ${color} font-bold`
-                : "bg-white hover:bg-gray-50 text-blue-600"
-            }`}
-          >
-            <Link
-              href={href}
-              onClick={() => setOpen(false)}
-              className="flex items-center space-x-3 group"
+        title={null}
+        placement="right"
+        open={open}
+        onClose={() => setOpen(false)}
+        width={280}
+        closable
+        className="!p-0"
+        bodyStyle={{ padding: 0 }}
+      >
+        <div className="p-6 bg-white h-full">
+          <div className="flex flex-col mt-10 space-y-6">
+
+            {links.map(({ href, label, icon: Icon }) => {
+              const isActive = pathname === href;
+
+              return (
+                <Link
+                  key={href}
+                  href={href}
+                  onClick={() => setOpen(false)}
+                  className={`flex items-center space-x-4 px-6 py-4 rounded-lg transition-all group ${
+                    isActive
+                      ? "bg-gray-100 translate-x-[6px] text-blue-600 font-semibold"
+                      : "hover:bg-gray-50 text-blue-500"
+                  }`}
+                >
+                  <Icon
+                    className={`text-xl transition-all duration-300 group-hover:scale-110 ${
+                      isActive ? "text-blue-600" : "text-blue-400 group-hover:text-blue-500"
+                    }`}
+                  />
+                  <span className="text-lg">{label}</span>
+                </Link>
+              );
+            })}
+
+            <hr className="my-6" />
+
+            {/* Resume Link */}
+            <a
+              href="https://docs.google.com/document/d/1pL0If1qbO5LQpJ5oHNGZQEjOMn_jQa0jsB3EfFS1r1Q/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 px-6 py-3 text-lg font-semibold rounded-lg hover:bg-gray-200 text-center transition"
             >
-              <IconComponent
-                className={`text-xl transform transition-all duration-300 group-hover:scale-110 group-hover:translate-x-1 ${
-                  isActive ? color : "text-blue-400 group-hover:text-blue-400"
-                }`}
-              />
-              <span
-                className={`text-[1.1rem] font-semibold transition-colors duration-300 ${
-                  isActive ? color : "text-blue-400 group-hover:text-blue-400"
-                }`}
-              >
-                {label}
-              </span>
-            </Link>
+              <FilePdfOutlined className="mr-2" />
+              View My Resume
+            </a>
           </div>
-        );
-      })}
-
-      <hr className="text-neutral-700" />
-
-      <div className="mt-12 mx-auto">
-        <a
-          href="https://docs.google.com/document/d/1pL0If1qbO5LQpJ5oHNGZQEjOMn_jQa0jsB3EfFS1r1Q/edit?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block text-nowrap text-blue-600 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-gray-300 transition"
-        >
-          <FilePdfOutlined /> View My Resume
-        </a>
-      </div>
-    </div>
-  </div>
-</Drawer>
-
+        </div>
+      </Drawer>
     </>
   );
 }
