@@ -28,7 +28,7 @@ export default function Portfolio() {
   return (
     <Layout className="h-full">
       
-      <Content className="w-full lg:p-6 p-1 bg-white ">
+      <Content className="w-full xl:p-6 lg:p-4 md:p-2 p-0  bg-white ">
         {isLoading ? (
           <Loading setIsLoading={setIsLoading} />
         ) : (
