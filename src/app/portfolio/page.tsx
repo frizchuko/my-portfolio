@@ -16,11 +16,11 @@ export default function Portfolio() {
     const hasLoaded = sessionStorage.getItem("hasLoaded");
   
     if (hasLoaded) {
-      setIsLoading(false); // Skip the loader if already loaded
+      setIsLoading(false); 
     } else {
       setTimeout(() => {
         setIsLoading(false);
-        sessionStorage.setItem("hasLoaded", "true"); // Mark as loaded
+        sessionStorage.setItem("hasLoaded", "true"); 
       }, 3000); 
     }
   }, []);
@@ -28,7 +28,7 @@ export default function Portfolio() {
   return (
     <Layout className="h-full">
       
-      <Content className="w-full p-6 bg-white ">
+      <Content className="w-full lg:p-6 p-1 bg-white ">
         {isLoading ? (
           <Loading setIsLoading={setIsLoading} />
         ) : (
