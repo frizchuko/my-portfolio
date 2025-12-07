@@ -18,8 +18,8 @@ export default function GlobalRouteLoader() {
   if (!loading) return null;
 
   return (
-    <div className="fixed top-[50%] right-[50%] z-[9999] bg-white  p-3 rounded-full">
-      <Spin size="small" />
+    <div className="fixed mx-auto my-auto z-[9999] bg-white  p-3 rounded-full">
+      <Spin size="large" />
     </div>
   );
 }
