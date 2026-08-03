@@ -43,7 +43,7 @@ export default function Footer() {
         {/* Copyright Section */}
         <div className="text-center mt-2 text-blue-500">
           <p>&copy; {new Date().getFullYear()} My Portfolio. All rights reserved.</p>
-          <a href="https://storyset.com/people" className="text-muted text-black">People illustrations by Storyset</a>
+          <a href="https://storyset.com/people" className="text-muted text-black"></a>
         </div>
       </div>
     </div>
